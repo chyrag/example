@@ -12,4 +12,4 @@ build:
 	docker build -t ckzed-$(APP) .
 
 clean:
-	docker rmi ckzed-$(APP)
+	-docker rmi ckzed-$(APP)
