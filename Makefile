@@ -6,10 +6,10 @@ all: run
 
 
 run: build
-	./$(APP)
+	docker run --rm --network=host ckzed-$(APP)
 
 build:
-	go build -o $(APP)
+	docker build -t ckzed-$(APP) .
 
 clean:
-	rm -f $(APP)
+	docker rmi ckzed-$(APP)
